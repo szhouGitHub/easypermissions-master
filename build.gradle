@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    projectName = 'EasyPermissions'
+    projectDesc = 'A wrapper library for basic Android M system permissions logic'
+
+    githubUrl = 'https://github.com/googlesamples/easypermissions'
+
+    mavenGroup = 'pub.devrel'
+    mavenArtifactId = 'easypermissions'
+    mavenVersion = '1.0.1'
+
+    bintrayOrg = 'easygoogle'
+
+    support_library_version = '27.0.1'
+
+    compileSdk = 27
+    targetSdk = 27
+}
